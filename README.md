@@ -2,7 +2,7 @@
 A user interface for building swagger compliant API Documentation.
 
 ## Why
-[Swagger Specification](http://swagger.io/) is a widely used standard in designing APIs. But having to study the whole specification and writing it manually is time consuming and error prone. The goal of this project is to provide API Designers to focus on their job and make all of these easy. Letting them to have a faster workflow, builing specs while the team discusses their ideas. **Now anyone can jump right into designing APIs without prior knowledge of Swagger specs**, while producing a widely known standard as a byproduct.
+[Swagger Specification](http://swagger.io/) is a widely used standard in designing APIs. But having to study the whole specification and writing it manually is time consuming and error prone. The goal of this project is to provide API Designers to focus on their job and make all of these easy. Letting them to have a faster workflow, builing specs while the team discusses their ideas. **Anyone can now jump right into designing APIs without prior knowledge of Swagger specs**, while producing a widely known standard as a byproduct.
 
 ## License
 The MIT License (MIT)
