@@ -1,0 +1,56 @@
+<md-content style ='height: 100%'>
+	<section>
+		<md-subheader>Paths
+			<sw-icon-container>
+				<md-button class="md-icon-button" aria-label="add new path">
+					<md-icon md-svg-src="images/icons/add.svg"></md-icon>
+				</md-button>
+			</sw-icon-container>
+		</md-subheader>
+		<md-list>
+			<md-list-item ng-click='vm.goTo(path)' ng-repeat='path in vm.paths'> 
+				{{path}}
+			</md-list-item>
+		</md-list>
+	</section>
+	<section>
+		<md-subheader>Models</md-subheader>
+		<md-list>
+			<md-list-item ng-click='alert()'> Employee </md-list-item>
+			<md-list-item ng-click='alert()'> Authorizations </md-list-item>
+			<md-list-item ng-click='alert()'> Error </md-list-item>
+			<md-list-item ng-click='alert()'> Success </md-list-item>
+		</md-list>
+	</section>
+	<section>
+		<md-subheader>Parameters</md-subheader>
+		<md-list>
+			<md-list-item ng-click='alert()'> Offset </md-list-item>
+			<md-list-item ng-click='alert()'> Limit </md-list-item>
+			<md-list-item ng-click='alert()'> Query </md-list-item>
+		</md-list>
+	</section>
+	<section>
+		<md-subheader>Responses</md-subheader>
+		<md-list>
+			<md-list-item ng-click='alert()'> Success </md-list-item>
+			<md-list-item ng-click='alert()'> Internal Server Error </md-list-item>
+			<md-list-item ng-click='alert()'> Not Found </md-list-item>
+			<md-list-item ng-click='alert()'> Not modified </md-list-item>
+		</md-list>
+	</section>
+	<section>
+		<md-subheader>Security</md-subheader>
+		<md-list>
+			<md-list-item ng-click='alert()'> api_key </md-list-item>
+			<md-list-item ng-click='alert()'> petstore_auth </md-list-item>
+		</md-list>
+	</section>
+	<section>
+		<md-subheader>Security Requirement</md-subheader>
+		<md-list>
+			<md-list-item ng-click='alert()'> api_key </md-list-item>
+			<md-list-item ng-click='alert()'> petstore_auth </md-list-item>
+		</md-list>
+	</section>
+</md-content>

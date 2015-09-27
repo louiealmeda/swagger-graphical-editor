@@ -1,0 +1,23 @@
+sw-side-bar{
+	display: block;
+	height: 100%;
+	overflow: auto;
+	border-right: 1px solid #DDD;
+}
+
+sw-side-bar md-list-item{
+/*	min-height: 30px;*/
+}
+
+sw-side-bar md-list-item{
+	padding: 0px !important;
+}
+
+sw-side-bar md-list-item>*>*{
+	border-radius: 0px !important;
+	padding: 0px 15px !important;
+}
+
+sw-side-bar md-divider{
+	margin-top: 20px;
+}

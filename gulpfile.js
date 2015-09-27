@@ -282,7 +282,7 @@ gulp.task('clean-images', function(done) {
 gulp.task('clean-styles', function(done) {
     var files = [].concat(
         config.temp + '**/*.css',
-        config.build + 'styles/**/*.css'
+        config.build + '**/*.css'
     );
     clean(files, done);
 });
@@ -506,7 +506,7 @@ function startBrowserSync(isDev, specRunner) {
         files: isDev ? [
             config.client + '**/*.*',
             '!' + config.less,
-            config.temp + '**/*.css'
+            config.client + '**/*.css'
         ] : [],
         ghostMode: { // these are the defaults t,f,t,t
             clicks: true,

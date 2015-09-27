@@ -1,0 +1,17 @@
+html, body{
+	height: 100%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+body>div[ng-include]{
+	display: block;
+	position: relative;
+	height: 100%;
+}
+
+[sw-add-button]{
+	position: absolute;
+	right: 40px;
+}
