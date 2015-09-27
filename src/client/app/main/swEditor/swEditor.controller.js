@@ -9,7 +9,7 @@
 	function SwEditorController(){
 		var vm = this;
 		vm.property = 'SwEditorController';
-		
+
 
 		activate();
 

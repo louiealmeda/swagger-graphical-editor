@@ -30,7 +30,7 @@
 		////////////////
 
 		function goTo(path){
-			var tmp = path.replace(/\//g, "").replace(/{/g, ":").replace(/}(.)/,"-$1").replace(/}/g,"");
+			var tmp = path.replace(/\//g, '').replace(/{/g, ':').replace(/}(.)/,'-$1').replace(/}/g,'');
 			
 			$state.go('path', {name:tmp});
 		}

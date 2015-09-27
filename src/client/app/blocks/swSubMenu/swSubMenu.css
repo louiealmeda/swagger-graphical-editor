@@ -1,0 +1,58 @@
+sw-sub-menu{
+	bottom: 0px;
+	position: absolute;
+	width: calc(100% + 20px);
+	margin-left: -20px;
+	display: block;
+	height: 60%;
+	background-color: #DDD;
+	overflow: hidden;
+}
+
+sw-sub-menu:before{
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 50px;
+	left: -10px;
+	transform: skew(-45deg);
+	transform-origin: 100% 0;
+/*	opacity: 0.5;*/
+	background-color: white;
+	z-index: 1;
+}
+
+sw-sub-menu>button{
+	float: left;
+	height: 100%;
+/*	padding: 19px 15px !important;*/
+/*	line-height: 0px;*/
+	margin: 0px !important;
+/*	outline: 1px solid red;*/
+	border-radius: 0px !important;
+}
+
+sw-sub-menu>button:first-child{
+	padding-left: 50px;
+	padding-right: 25px;
+}
+
+.method-border{
+	height: 4px; 
+	margin-top: -1px; 
+	z-index: 10;
+	position: relative;
+}
+
+/*
+
+sw-sub-menu:before{
+	content: '';
+	height: 100%;
+	position: absolute;
+	width: 100px;
+	transform: skew(-45deg);
+	transform-origin: 100% 0;
+	
+	background-color: #DDD;
+}*/

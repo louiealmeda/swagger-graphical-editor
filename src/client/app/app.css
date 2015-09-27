@@ -15,3 +15,26 @@ body>div[ng-include]{
 	position: absolute;
 	right: 40px;
 }
+
+
+[border='bottom']{
+	border-bottom: 1px solid #DDD;
+}
+
+
+[method]{
+	color: white;
+	font-weight: bold;
+}
+
+[method='get']{ background-color: #6bbd5b; }
+[method='put']{ background-color: #9b708b; }
+[method='post']{ background-color: #248fb2; }
+[method='delete']{ background-color: #e27a7a; }
+[method='patch']{ background-color: purple; }
+
+[method='get']:hover { background-color: #6bbd5b !important; }
+[method='put']:hover { background-color: #9b708b !important; }
+[method='post']:hover { background-color: #248fb2 !important; }
+[method='delete']:hover { background-color: #e27a7a !important; }
+[method='patch']:hover { background-color: purple !important; }

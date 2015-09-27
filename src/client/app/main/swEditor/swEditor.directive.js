@@ -14,7 +14,7 @@
 		//
 		var directive = {
 			bindToController: true,
-			controller: "SwEditorController",
+			controller: 'SwEditorController',
 			templateUrl: 'app/main/swEditor/swEditor.html',
 			controllerAs: 'vm',
 			link: link,

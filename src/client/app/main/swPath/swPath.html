@@ -1,1 +1,20 @@
-se incididunt exquisitaque
+<div sw-layout='row' border='bottom'>
+	<sw-title>
+		/employee/{id}
+	</sw-title>
+	<div style="width: 100%">
+		<sw-sub-menu>
+			<md-button ng-click='vm.method = "get"' method='get' >GET</md-button>
+			<md-button ng-click='vm.method = "post"' method='post' >POST</md-button>
+			<md-button ng-click='vm.method = "delete"' method='delete' >DELETE</md-button>
+			<md-button ng-click='vm.method = "put"' method='put' >PUT</md-button>
+			<md-button>+</md-button>
+<!--
+			<span method='get'>GET</span>
+			<span method='put'>PUT</span>
+			<span method='post'>POST</span>
+-->
+		</sw-sub-menu>
+	</div>
+</div>
+<div class='method-border' method='{{vm.method}}'></div>

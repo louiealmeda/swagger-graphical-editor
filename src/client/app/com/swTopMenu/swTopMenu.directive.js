@@ -14,7 +14,7 @@
 		//
 		var directive = {
 			bindToController: true,
-			controller: "TopMenuController",
+			controller: 'TopMenuController',
 			templateUrl: 'app/com/swTopMenu/swTopMenu.html',
 			controllerAs: 'vm',
 			link: link,

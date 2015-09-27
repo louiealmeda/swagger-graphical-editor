@@ -1,0 +1,10 @@
+[sw-layout]{
+	display: table;
+	width: 100%;
+	position: relative;
+}
+
+[sw-layout]>*{
+	display: table-cell;
+	position: relative;
+}

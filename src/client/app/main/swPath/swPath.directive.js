@@ -14,7 +14,7 @@
 		//
 		var directive = {
 			bindToController: true,
-			controller: "SwPathController",
+			controller: 'SwPathController',
 			templateUrl: 'app/main/swPath/swPath.html',
 			controllerAs: 'vm',
 			link: link,

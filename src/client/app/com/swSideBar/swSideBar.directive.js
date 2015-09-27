@@ -14,7 +14,7 @@
 		//
 		var directive = {
 			bindToController: true,
-			controller: "SwSideBarController",
+			controller: 'SwSideBarController',
 			templateUrl: 'app/com/swSideBar/swSideBar.html',
 			controllerAs: 'vm',
 			link: link,

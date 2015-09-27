@@ -1,10 +1,12 @@
 (function () {
-    'use strict';
+	'use strict';
 
-    angular.module('app', [
-        'app.core',
-        'app.main',
-        'app.com'
-    ]);
+	var app = angular.module('app', [
+		'app.core',
+		'app.main',
+		'app.com'
+	]);
+
+	app.run(['$state', function ($state) {}]);
 
 })();

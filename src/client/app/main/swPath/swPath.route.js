@@ -11,7 +11,7 @@
 			
 			$stateProvider
 				.state('path', {
-					url: "/path/:name",
+					url: '/path/:name',
 					templateUrl: 'app/main/swPath/swPath.html',
 					controller: 'SwPathController'
 				});
