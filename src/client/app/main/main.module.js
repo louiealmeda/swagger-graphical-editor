@@ -4,6 +4,7 @@
 	angular
 		.module('app.main', [
 			'app.main.swEditor',
-			'app.main.swPath'
+			'app.main.swPath',
+			'app.main.operationEditor'
 		]);
 })();

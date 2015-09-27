@@ -11,9 +11,10 @@
 			
 			$stateProvider
 				.state('path', {
-					url: '/path/:name',
+					url: '/path/:path',
 					templateUrl: 'app/main/swPath/swPath.html',
-					controller: 'SwPathController'
+					controller: 'SwPathController',
+					controllerAs: 'vm'
 				});
 		}
 })();

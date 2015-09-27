@@ -19,10 +19,17 @@ sw-sub-menu:before{
 	transform-origin: 100% 0;
 /*	opacity: 0.5;*/
 	background-color: white;
-	z-index: 1;
+	z-index: 5;
 }
 
+sw-sub-menu>button.active{
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+	z-index: 2;
+/*	text-shadow: 0px -1px 1px rgba(0,0,0,0.3);*/
+	padding-top: 5px !important;
+}
 sw-sub-menu>button{
+	transition: 0.3s !important;
 	float: left;
 	height: 100%;
 /*	padding: 19px 15px !important;*/
@@ -38,11 +45,13 @@ sw-sub-menu>button:first-child{
 }
 
 .method-border{
-	height: 4px; 
+	height: 8px; 
 	margin-top: -1px; 
 	z-index: 10;
 	position: relative;
+	transition: 0.2s;
 }
+
 
 /*
 

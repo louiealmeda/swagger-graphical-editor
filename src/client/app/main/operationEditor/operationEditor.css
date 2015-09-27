@@ -1,0 +1,11 @@
+/*
+sw-path{
+	display: block;
+	width: 1024px;
+	width: calc(100% - 50px);
+	height: calc(100% - 50px);
+	background-color: white;
+	margin: auto;
+	margin-top: 25px;
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}*/
