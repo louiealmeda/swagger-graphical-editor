@@ -57,15 +57,20 @@
     <script src="/bower_components/angular-aria/angular-aria.js"></script>
     <script src="/bower_components/angular-material/angular-material.js"></script>
     <script src="/bower_components/js-data/dist/js-data.js"></script>
+    <script src="/bower_components/js-data-localstorage/dist/js-data-localstorage.js"></script>
     <script src="/bower_components/js-data-http/dist/js-data-http.js"></script>
     <script src="/bower_components/js-data-angular/dist/js-data-angular.js"></script>
+    <script src="/bower_components/validate/validate.js"></script>
+    <script src="/bower_components/js-data-schema/dist/js-data-schema.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js js/app.js -->
     <!-- inject:js -->
     <script src="/src/client/app/app.module.js"></script>
+    <script src="/src/client/app/blocks/blocks.module.js"></script>
     <script src="/src/client/app/com/com.module.js"></script>
+    <script src="/src/client/app/com/forms/forms.module.js"></script>
     <script src="/src/client/app/com/swSideBar/swSideBar.module.js"></script>
     <script src="/src/client/app/com/swTopMenu/swTopMenu.module.js"></script>
     <script src="/src/client/app/core/core.module.js"></script>
@@ -73,6 +78,9 @@
     <script src="/src/client/app/main/operationEditor/operationEditor.module.js"></script>
     <script src="/src/client/app/main/swEditor/swEditor.module.js"></script>
     <script src="/src/client/app/main/swPath/swPath.module.js"></script>
+    <script src="/src/client/app/sdk/sdk.module.js"></script>
+    <script src="/src/client/app/blocks/schemaErrorHandler/schemaErrorHandler.js"></script>
+    <script src="/src/client/app/com/forms/newDocument/newDocument.controller.js"></script>
     <script src="/src/client/app/com/swSideBar/swSideBar.controller.js"></script>
     <script src="/src/client/app/com/swSideBar/swSideBar.directive.js"></script>
     <script src="/src/client/app/com/swTopMenu/swTopMenu.controller.js"></script>
@@ -86,6 +94,10 @@
     <script src="/src/client/app/main/swEditor/swEditor.route.js"></script>
     <script src="/src/client/app/main/swPath/swPath.controller.js"></script>
     <script src="/src/client/app/main/swPath/swPath.route.js"></script>
+    <script src="/src/client/app/sdk/sdk.config.js"></script>
+    <script src="/src/client/app/sdk/Swagger.js"></script>
+    <script src="/src/client/app/sdk/swagger/Info.js"></script>
+    <script src="/src/client/app/sdk/swagger/info/license.js"></script>
     <!-- endinject -->
 
     <!-- inject:templates:js -->

@@ -1,0 +1,65 @@
+<md-dialog>
+	<md-toolbar>
+		<div class="md-toolbar-tools">Create new API Documentation</div>
+	</md-toolbar>
+	<md-dialog-content style='width: 600px;'>
+		<h5>API Information</h5>
+		<md-input-container>
+			<label>Title</label>
+			<input ng-model="vm.document.info.title" type="text" required>
+		</md-input-container>
+		<md-input-container>
+			<label>Description</label>
+			<textarea ng-model="vm.document.info.description"></textarea>
+		</md-input-container>
+
+		<div layout='row'>
+
+			<md-input-container flex='70'>
+				<label>Terms of service</label>
+				<input ng-model="vm.document.info.termsOfService" type="text">
+			</md-input-container>
+
+			<md-input-container>
+				<label>Version</label>
+				<input ng-model="vm.document.info.version" type="text" required>
+			</md-input-container>
+
+		</div>
+
+		<h5>Contact information</h5>
+		<md-input-container>
+			<label>Name</label>
+			<input ng-model="vm.document.info.contact.name" type="text">
+		</md-input-container>
+		<div layout='row'>
+			<md-input-container flex>
+				<label>Url</label>
+				<input ng-model="vm.document.info.contact.url" type="text">
+			</md-input-container>
+
+			<md-input-container flex>
+				<label>Email</label>
+				<input ng-model="vm.document.info.contact.email" type="email">
+			</md-input-container>
+
+		</div>
+		<h5>License</h5>
+		<div layout='row'>
+
+			<md-input-container flex>
+				<label>Name</label>
+				<input ng-model="vm.document.info.license.name" type="text" required>
+			</md-input-container>
+			<md-input-container flex>
+				<label>Url</label>
+				<input ng-model="vm.document.info.license.url" type="text">
+			</md-input-container>
+
+		</div>
+		<section layout='row' layout-align='end center' layout-wrap>
+			<md-button ng-click='vm.cancel();'>Cancel</md-button>
+			<md-button ng-click='vm.create();' class='md-raised md-primary'>Create</md-button>
+		</section>
+	</md-dialog-content>
+</md-dialog>

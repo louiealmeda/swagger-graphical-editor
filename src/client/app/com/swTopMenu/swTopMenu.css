@@ -1,3 +1,5 @@
 sw-top-menu{
 	display: block;
+	position: relative;
+	z-index: 20;
 }
