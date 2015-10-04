@@ -34,27 +34,15 @@
 			relations: {
 
 				hasMany: {
-
+					path: {
+						localField: 'paths',
+						foreignKey: 'swaggerID'
+					}
 				},
 				hasOne: {
 
-					info: {
-						localField : 'info',
-						foreignKey : 'swaggerID',
-						enumerable: true
-					}
-
 				}
 			}
-//			,
-//			validate: function (swagger, cb) {
-//				var err = validate(swagger, scheme);
-//				if (err) {
-//					cb(err);
-//				} else {
-//					cb(null, err);
-//				}
-//			}
 
 		});
 

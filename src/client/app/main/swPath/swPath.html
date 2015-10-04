@@ -1,18 +1,27 @@
 <div sw-layout='row' border='bottom'>
-	<sw-title>
-		/employee/{id}
+	<sw-title contenteditable ng-model='vm.path.key' ng-blur='vm.saveChanges()'>
 	</sw-title>
 	<div style="width: 100%">
 		<sw-sub-menu>
 			<md-button 
 					   ng-repeat='operation in vm.operations' 
 					   ng-class='{active: vm.operation == operation}' 
-					   ng-click='vm.goTo(operation)' 
-					   operation='{{operation}}' 
+					   ng-click='vm.goTo(operation.key)' 
+					   operation='{{operation.key}}' 
 					   >
-				{{operation}}
+				{{operation.key}}
 			</md-button>
-			<md-button>+</md-button>
+			<md-menu tooltip='Add an operation'>
+				<md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+					<md-icon md-menu-origin md-svg-icon="images/icons/add.svg"></md-icon>
+				</md-button>
+				<md-menu-content width="2">
+					<md-menu-item ng-repeat="operation in vm.operationTypes">
+						<md-button ng-click="vm.addOperation(operation)"> <span md-menu-align-target>{{operation}}</span></md-button>
+					</md-menu-item>
+				</md-menu-content>
+			</md-menu>
+			<!--			<md-button>+</md-button>-->
 		</sw-sub-menu>
 	</div>
 </div>

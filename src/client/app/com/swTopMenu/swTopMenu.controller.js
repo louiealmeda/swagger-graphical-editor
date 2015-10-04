@@ -6,19 +6,52 @@
 		.controller('TopMenuController', TopMenuController);
 
 	/* @ngInject */
-	function TopMenuController($mdDialog){
+	function TopMenuController(Swagger, Document, $mdDialog){
 		var vm = this;
 		vm.property = 'TopMenuController';
 		
 
-		vm.file = {};
-		vm.file.new = fileNew;
+		vm.file = {
+			new: fileNew,
+			recent: {
+				clearAll: clearAllRecent,
+				open: openRecent
+			}
+		};
+		
+		vm.document = Document.current.then(function(document){
+			vm.document = Document.current;
+		});
+		
+		Swagger.findAll()
+		.then(function(){
+			vm.documents = Swagger.getAll();
+		});
+		
+		console.log(vm.document);
 		
 		activate();
 
 		////////////////
 		
 		function activate() {
+		
+		}
+		
+		function clearAllRecent () {
+			console.log('Clearing all recent');
+			Swagger.destroyAll()
+			.then(function(){
+				
+				vm.documents = [];
+				
+			});
+		}
+		
+		function openRecent(document){
+			
+			Document.open(document);
+			vm.document = document;
 		}
 		
 		function fileNew (event) {
@@ -30,7 +63,13 @@
 				parent: angular.element('body'),
 				targetEvent: event,
 				clickOutsideToClose: true
+			})
+			.then(function(data){
+				
+				vm.document = Document.current;
+				
 			});
+			;
 			
 		}
 	}

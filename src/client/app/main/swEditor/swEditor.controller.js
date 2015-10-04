@@ -6,7 +6,7 @@
 		.controller('SwEditorController', SwEditorController);
 
 	/* @ngInject */
-	function SwEditorController(Swagger, Info){
+	function SwEditorController(Swagger){
 		var vm = this;
 		vm.property = 'SwEditorController';
 
@@ -27,13 +27,6 @@
 		.then(function(){
 			
 			console.log(Swagger.getAll());
-			
-		});
-		
-		Info.findAll()
-		.then(function(){
-			
-			console.log(Info.getAll());
 			
 		});
 

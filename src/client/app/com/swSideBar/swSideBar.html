@@ -2,14 +2,14 @@
 	<section>
 		<md-subheader>Paths
 			<sw-icon-container>
-				<md-button class="md-icon-button" aria-label="add new path">
+				<md-button ng-click='vm.newPath($event)' class="md-icon-button" aria-label="add new path">
 					<md-icon md-svg-src="images/icons/add.svg"></md-icon>
 				</md-button>
 			</sw-icon-container>
 		</md-subheader>
 		<md-list>
-			<md-list-item ng-click='vm.goTo(path)' ng-repeat='path in vm.paths'> 
-				{{path}}
+			<md-list-item ng-class='{active: vm.isActive(path.id)}' ng-repeat='path in vm.document.paths | orderBy: "key"' ng-click='vm.goTo(path.id)'> 
+				{{path.key}}
 			</md-list-item>
 		</md-list>
 	</section>

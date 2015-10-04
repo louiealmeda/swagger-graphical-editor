@@ -5,7 +5,7 @@
 		</md-toolbar-filler>
 
 		<div>
-			<h2 class="md-toolbar-tools">{{vm.swagger.title}}</h2>
+			<h2 class="md-toolbar-tools">{{vm.document.info.title}}&nbsp;<span id='version'>v. {{vm.document.info.version}}</span></h2>
 			<md-menu-bar>
 				<md-menu>
 					<button ng-click="$mdOpenMenu()">
@@ -25,9 +25,19 @@
 							</md-button>
 						</md-menu-item>
 						<md-menu-item>
-							<md-button disabled="disabled" ng-click="ctrl.sampleAction('Rename', $event)">
-								Rename
-							</md-button>
+							<md-menu>
+<!--								<md-icon md-svg-icon="undo"></md-icon>-->
+								<md-button ng-click="$mdOpenMenu()">Open Recent...</md-button>
+								<md-menu-content>
+									<md-menu-item ng-repeat='document in vm.documents'>
+										<md-button ng-click="vm.file.recent.open(document)">{{document.info.title}} [v. {{document.info.version}}]</md-button>
+									</md-menu-item>
+									<md-menu-divider></md-menu-divider>
+									<md-menu-item>
+										<md-button ng-disabled="vm.documents.length == 0" ng-click="vm.file.recent.clearAll()">Clear all</md-button>
+									</md-menu-item>
+								</md-menu-content>
+							</md-menu>
 						</md-menu-item>
 						<md-menu-divider></md-menu-divider>
 						<md-menu-item>
@@ -43,22 +53,6 @@
 						Edit
 					</button>
 					<md-menu-content>
-<!--
-						<md-menu-item>
-							<md-menu>
-								<md-icon md-svg-icon="undo"></md-icon>
-								<md-button ng-click="$mdOpenMenu()">Info</md-button>
-								<md-menu-content>
-									<md-menu-item><md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Title</md-button></md-menu-item>
-									<md-menu-item><md-button ng-click="ctrl.sampleAction('New Document', $event)">Description</md-button></md-menu-item>
-									<md-menu-item><md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Terms of Service</md-button></md-menu-item>
-									<md-menu-item><md-button ng-click="ctrl.sampleAction('New Form', $event)">Contact Information</md-button></md-menu-item>
-									<md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">License</md-button></md-menu-item>
-									<md-menu-item><md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Version</md-button></md-menu-item>
-								</md-menu-content>
-							</md-menu>
-						</md-menu-item>
--->
 						<md-menu-item class="md-indent">
 							<md-icon md-svg-icon="undo"></md-icon>
 							<md-button ng-click="ctrl.sampleAction('undo', $event)">

@@ -4,3 +4,9 @@ sw-title{
 	display: block;
 	z-index: 5;
 }
+
+sw-title[contenteditable]{
+	
+	outline: none !important;
+	
+}

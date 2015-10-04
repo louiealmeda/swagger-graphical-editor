@@ -6,7 +6,7 @@
 		.controller('NewDocumentFormController', NewDocumentFormController);
 
 	/* @ngInject */
-	function NewDocumentFormController(Swagger, $mdDialog, schemaErrorHandler){
+	function NewDocumentFormController(Swagger, $mdDialog, schemaErrorHandler, Document){
 		var vm = this;
 		vm.property = 'NewDocumentFormController';
 		
@@ -34,8 +34,11 @@
 			}
 			else
 			{
-				Swagger.create(vm.document).then(function(){
-					console.log('created!');
+				Swagger.create(vm.document).then(function(data){
+					
+					Document.open(data);
+//					Document.current = console.log(data);
+					$mdDialog.hide(data);
 				});
 //				console.log(vm.document);
 			}
@@ -43,7 +46,7 @@
 		}
 		
 		function cancel () {
-			
+			$mdDialog.cancel();
 		}
 		
 		

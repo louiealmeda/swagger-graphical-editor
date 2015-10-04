@@ -3,3 +3,11 @@ sw-top-menu{
 	position: relative;
 	z-index: 20;
 }
+
+sw-top-menu #version{
+	padding: 5px;
+	font-size: 15px;
+	background-color: #AAA;
+	border-radius: 5px;
+	color: white;
+}

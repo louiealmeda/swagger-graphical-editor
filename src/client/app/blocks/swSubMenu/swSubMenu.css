@@ -1,8 +1,8 @@
 sw-sub-menu{
 	bottom: 0px;
 	position: absolute;
-	width: calc(100% + 20px);
-	margin-left: -20px;
+	width: calc(100% + 15px);
+	margin-left: -15px;
 	display: block;
 	height: 60%;
 	background-color: #DDD;
@@ -28,6 +28,12 @@ sw-sub-menu>button.active{
 /*	text-shadow: 0px -1px 1px rgba(0,0,0,0.3);*/
 	padding-top: 5px !important;
 }
+sw-sub-menu>md-menu>button{
+	position: absolute;
+	top: -5px;
+	padding-left: 20px;
+}
+
 sw-sub-menu>button{
 	transition: 0.3s !important;
 	float: left;
