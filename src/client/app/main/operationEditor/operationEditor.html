@@ -1,0 +1,16 @@
+<div class='method-border' operation='{{vm.operationName}}'></div>
+<md-content layout-padding>
+	<form>
+		<md-input-container class="md-block" flex>
+			<label>Summary</label>
+			<input ng-model="vm.operation.summary">
+		</md-input-container>
+
+		<md-input-container class="md-block">
+			<label>Description (Github Flavored MarkDown editor comming soon)</label>
+			<textarea ng-model="vm.operation.description" md-maxlength="150"></textarea>
+		</md-input-container>
+
+	</form>
+
+</md-content>

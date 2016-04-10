@@ -10,7 +10,7 @@
 		function route ($stateProvider, $urlRouterProvider) {
 			
 			$stateProvider
-				.state('path.operation', {
+				.state('home.path.operation', {
 					url: '/operation/:operation',
 					templateUrl: 'app/main/operationEditor/operationEditor.html',
 					controller: 'OperationEditorController',

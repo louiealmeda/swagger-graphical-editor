@@ -29,7 +29,7 @@
 <!--								<md-icon md-svg-icon="undo"></md-icon>-->
 								<md-button ng-click="$mdOpenMenu()">Open Recent...</md-button>
 								<md-menu-content>
-									<md-menu-item ng-repeat='document in vm.documents'>
+									<md-menu-item ng-repeat='document in vm.documents'> 
 										<md-button ng-click="vm.file.recent.open(document)">{{document.info.title}} [v. {{document.info.version}}]</md-button>
 									</md-menu-item>
 									<md-menu-divider></md-menu-divider>

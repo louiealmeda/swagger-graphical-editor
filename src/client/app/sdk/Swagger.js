@@ -24,10 +24,6 @@
 			info: {}
 		});
 
-		var errors = swaggerSchema.validateSync(swaggerSchema.getDefaults());
-		console.log(errors);
-		console.log(schemaErrorHandler.getEndPointPath(errors, 'errors'));
-		
 		var Swagger = DS.defineResource({
 
 			name: 'swagger',

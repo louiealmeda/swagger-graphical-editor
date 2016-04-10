@@ -9,7 +9,7 @@
 	function TopMenuController(Swagger, Document, $mdDialog){
 		var vm = this;
 		vm.property = 'TopMenuController';
-		
+
 
 		vm.file = {
 			new: fileNew,
@@ -18,44 +18,54 @@
 				open: openRecent
 			}
 		};
-		
-		vm.document = Document.current.then(function(document){
-			vm.document = Document.current;
-		});
-		
-		Swagger.findAll()
-		.then(function(){
-			vm.documents = Swagger.getAll();
-		});
-		
-		console.log(vm.document);
-		
+
 		activate();
 
 		////////////////
-		
+
 		function activate() {
-		
+
+			vm.document = Document.current.then(function(document){
+				vm.document = Document.current;				
+			});
+			
+			vm.documents = Document.getRecent().then(function(recentDocs){
+				vm.documents = recentDocs;
+			});
+
+
 		}
-		
+
 		function clearAllRecent () {
 			console.log('Clearing all recent');
 			Swagger.destroyAll()
-			.then(function(){
-				
+				.then(function(){
+
 				vm.documents = [];
-				
+
 			});
 		}
-		
+
 		function openRecent(document){
 			
-			Document.open(document);
-			vm.document = document;
-		}
-		
-		function fileNew (event) {
+			Document.open(document).then(function(){
+				console.log('opened', document);
+				vm.document = document;
+
+				console.log('getting recent');
+				
+				vm.documents = Document.getRecent().then(function(recentDocs){
+					vm.documents = recentDocs;
+				});
+				
+			}).catch(function(e){
+				console.log('error opening file', e);
+			});
 			
+		}
+
+		function fileNew (event) {
+
 			$mdDialog.show({
 				controller: 'NewDocumentFormController',
 				templateUrl: 'app/com/forms/newDocument/newDocument.html',
@@ -65,12 +75,11 @@
 				clickOutsideToClose: true
 			})
 			.then(function(data){
-				
+
 				vm.document = Document.current;
-				
+
 			});
-			;
-			
+
 		}
 	}
 })();

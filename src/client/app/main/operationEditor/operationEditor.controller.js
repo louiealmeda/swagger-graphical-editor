@@ -6,7 +6,7 @@
 		.controller('OperationEditorController', OperationEditorController);
 
 	/* @ngInject */
-	function OperationEditorController($state){
+	function OperationEditorController($state, $stateParams){
 		var vm = this;
 		vm.property = 'OperationEditorController';
 		
@@ -22,6 +22,7 @@
 		}
 		
 		function activate() {
+			vm.operationName = $stateParams.operation;
 		}
 	}
 })();

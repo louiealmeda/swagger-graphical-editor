@@ -8,5 +8,6 @@ sw-title{
 sw-title[contenteditable]{
 	
 	outline: none !important;
+	white-space: nowrap;
 	
 }

@@ -11,10 +11,30 @@
 		return {
 			restrict: "A",
 			require: "ngModel",
+			scope: {
+				singleLine: '=?swDataSingleLine',	
+				singleWord: '=?swDataSingleWord'	
+			},
 			link: function(scope, element, attrs, ngModel) {
 
 				function read() {
-					ngModel.$setViewValue(element.html());
+					var val = element.html();
+					var sanitized = false;
+					if(scope.singleLine && val.indexOf('<br>') != -1){
+						val = val.replace(/<br>/g, '');
+						sanitized = true;
+					}
+					
+					if(scope.singleWord && (val.indexOf('&nbsp;') != -1 || val.indexOf(' ') != -1)){
+						val = val.replace(/ |&nbsp;/g, '');
+						sanitized = true;
+					}
+					
+					if(sanitized){	
+						element.html(val);
+					}
+					
+					ngModel.$setViewValue(val);
 				}
 
 				ngModel.$render = function() {

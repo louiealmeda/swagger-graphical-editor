@@ -1,10 +1,11 @@
 [sw-layout]{
-	display: table;
-	width: 100%;
+/*	display: table;*/
+/*	width: 100%;*/
 	position: relative;
+	display: flex;
 }
 
 [sw-layout]>*{
-	display: table-cell;
-	position: relative;
+/*	display: table-cell;*/
+/*	position: relative;*/
 }

@@ -27,14 +27,18 @@ body>div[ng-include]{
 	font-weight: bold;
 }
 
+[operation='head']{ background-color: #9be88c; }
 [operation='get']{ background-color: #6bbd5b; }
-[operation='put']{ background-color: #9b708b; }
+[operation='put']{ background-color: #7b546c; }
 [operation='post']{ background-color: #248fb2; }
 [operation='delete']{ background-color: #e27a7a; }
 [operation='patch']{ background-color: #b46697; }
+[operation='options']{ background-color: #b9bd5b; }
 
+[operation='head']:hover{ background-color: #9be88c !important; }
 [operation='get']:hover { background-color: #6bbd5b !important; }
-[operation='put']:hover { background-color: #9b708b !important; }
+[operation='put']:hover { background-color: #7b546c !important; }
 [operation='post']:hover { background-color: #248fb2 !important; }
 [operation='delete']:hover { background-color: #e27a7a !important; }
 [operation='patch']:hover { background-color: #b46697 !important; }
+[operation='options']:hover{ background-color: #b9bd5b !important; }

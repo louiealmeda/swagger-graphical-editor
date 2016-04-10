@@ -8,6 +8,17 @@
 	/* @ngInject */
 	function Operation(DS, validate, schema, schemaErrorHandler){
 		
+		
+		var operationTypes = [
+			'get',
+			'put',
+			'post',
+			'delete',
+			'options',
+			'head',
+			'patch'
+		];
+		
 		var swaggerSchema = schema.defineSchema('Operation', {
 			key: 'string'
 		});
@@ -32,6 +43,19 @@
 		});
 
 		Operation.schema = swaggerSchema;
+		
+		
+		Operation.getTypes = function(existing){
+			
+			existing = existing || [];
+			
+			return _.filter(operationTypes, function(op){
+				
+				return !_.find(existing, {key: op});
+				
+			});
+			
+		}
 		
 		return Operation;
 	}

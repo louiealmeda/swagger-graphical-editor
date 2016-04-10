@@ -10,19 +10,7 @@
 		var vm = this;
 		vm.property = 'SwEditorController';
 
-//		Swagger.destroyAll();
-//		Info.destroyAll();
-//		.then(function(){
-//			
-//		Swagger.create({
-//			id:1, 
-//			swagger: '2.0', 
-//			host: 'HostName', 
-//			infoID: 1
-//		});
-////		});
-//		Info.create({id: 1, title: 'test', swaggerID: 1});
-		
+
 		Swagger.findAll({}, {with:['info']})
 		.then(function(){
 			

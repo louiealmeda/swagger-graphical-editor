@@ -2,10 +2,10 @@ sw-sub-menu{
 	bottom: 0px;
 	position: absolute;
 	width: calc(100% + 15px);
-	margin-left: -15px;
+	margin-left: -14px;
 	display: block;
 	height: 60%;
-	background-color: #DDD;
+	background-color: #EEE;
 	overflow: hidden;
 }
 
@@ -58,6 +58,10 @@ sw-sub-menu>button:first-child{
 	transition: 0.2s;
 }
 
+sw-sub-menu .alone{
+	outline: 1px solid red;
+	padding-left: 20px !important;
+}
 
 /*
 

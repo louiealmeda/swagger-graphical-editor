@@ -34,13 +34,13 @@
 			}
 			else
 			{
+				
 				Swagger.create(vm.document).then(function(data){
 					
 					Document.open(data);
-//					Document.current = console.log(data);
 					$mdDialog.hide(data);
 				});
-//				console.log(vm.document);
+				
 			}
 			
 		}
